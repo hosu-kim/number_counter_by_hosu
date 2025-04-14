@@ -127,7 +127,7 @@ counter.addChangeListener((newCount) => {
 
 ## License
 
-MIT
+MIT License
 
 ## Author
 
