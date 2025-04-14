@@ -32,8 +32,7 @@ number_counter_by_hosu/
 │   ├── app.ts         # Application entry point
 │   ├── Counter.ts     # Main Counter class implementation
 │   ├── interfaces.ts  # TypeScript interfaces
-│   ├── styles.css     # Styling
-│   └── test.ts        # Test file
+│   └── styles.css     # Styling
 └── index.html         # Main HTML page
 ```
 
