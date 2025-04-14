@@ -128,9 +128,4 @@ MIT
 
 ## Author
 
-Hosu Kim
-
-## Acknowledgments
-
-- Icons from [placeholder]
-- Fonts: Poppins, Noto Sans KR from Google Fonts
+hosu-kim
