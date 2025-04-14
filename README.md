@@ -25,9 +25,7 @@ A modern, responsive counter application built with TypeScript featuring increme
 ## Project Structure
 
 ```
-number_counter_in_typescript/
-├── dist/
-│   └── app.js         # Compiled JavaScript
+number_counter_by_hosu/
 ├── src/
 │   ├── app.ts         # Application entry point
 │   ├── Counter.ts     # Main Counter class implementation
