@@ -1,6 +1,8 @@
 # TypeScript Number Counter by Hosu
 
-![Run example](images/example.png)
+<p align="center">
+  <img src="images/example.png" alt="Run example" width="400"/>
+</p>
 
 A modern, responsive counter application built with TypeScript featuring increment, decrement, and reset functionality.
 
