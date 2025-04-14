@@ -1,5 +1,7 @@
 # TypeScript Number Counter by Hosu
 
+![Run example](images/example.png)
+
 A modern, responsive counter application built with TypeScript featuring increment, decrement, and reset functionality.
 
 ## Features
