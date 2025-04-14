@@ -1,8 +1,6 @@
-# TypeScript Number Counter
+# TypeScript Number Counter by Hosu
 
 A modern, responsive counter application built with TypeScript featuring increment, decrement, and reset functionality.
-
-![Counter App Screenshot](https://via.placeholder.com/600x400?text=Counter+App)
 
 ## Features
 
@@ -25,9 +23,7 @@ A modern, responsive counter application built with TypeScript featuring increme
 ## Project Structure
 
 ```
-number_counter_in_typescript/
-├── dist/
-│   └── app.js         # Compiled JavaScript
+number_counter_by_hosu/
 ├── src/
 │   ├── app.ts         # Application entry point
 │   ├── Counter.ts     # Main Counter class implementation
@@ -48,8 +44,8 @@ number_counter_in_typescript/
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
-   cd number_counter_in_typescript
+   git clone https://github.com/hosu-kim/number_counter_by_hosu.git
+   cd typescript_number_counter_by_hosu
    ```
 
 2. Install dependencies:
@@ -132,9 +128,4 @@ MIT
 
 ## Author
 
-Hosu Kim
-
-## Acknowledgments
-
-- Icons from [placeholder]
-- Fonts: Poppins, Noto Sans KR from Google Fonts
+hosu-kim
