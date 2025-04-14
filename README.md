@@ -2,8 +2,6 @@
 
 A modern, responsive counter application built with TypeScript featuring increment, decrement, and reset functionality.
 
-![Counter App Screenshot](https://via.placeholder.com/600x400?text=Counter+App)
-
 ## Features
 
 - ✨ Clean, modern UI with responsive design
