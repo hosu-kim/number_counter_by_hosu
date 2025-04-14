@@ -1,4 +1,4 @@
-# TypeScript Number Counter
+# TypeScript Number Counter by Hosu
 
 A modern, responsive counter application built with TypeScript featuring increment, decrement, and reset functionality.
 
@@ -44,8 +44,8 @@ number_counter_by_hosu/
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
-   cd number_counter_in_typescript
+   git clone https://github.com/hosu-kim/number_counter_by_hosu.git
+   cd typescript_number_counter_by_hosu
    ```
 
 2. Install dependencies:
