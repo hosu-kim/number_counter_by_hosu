@@ -13,7 +13,7 @@ if (!counterElement || !incrementButton || !decrementButton || !resetButton) {
   throw new Error('Required DOM elements not found');
 }
 
-// Create counter instance with options
+// Create an object with counter configuration
 const counterOptions: CounterOptions = {
   initialValue: 0,
   minValue: -100,
