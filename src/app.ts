@@ -16,8 +16,8 @@ if (!counterElement || !incrementButton || !decrementButton || !resetButton) {
 // Create an object with counter configuration
 const counterOptions: CounterOptions = {
   initialValue: 0,
-  minValue: -100,
-  maxValue: 100,
+  minValue: -1000,
+  maxValue: 1000,
   step: 1
 };
 
