@@ -1,5 +1,5 @@
 import { Counter } from './Counter';
-import { CounterOptions } from './interfaces.js';
+import { CounterOptions } from './interfaces';
 
 // Select DOM elements
 const counterElement = document.getElementById('counter') as HTMLDivElement;
