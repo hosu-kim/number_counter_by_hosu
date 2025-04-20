@@ -10,15 +10,15 @@
 	--danger: #f44336;
 	--info: #2196f3;
 	--shadow: rgba(0, 0, 0, 0.1);
-  }
-  
-  * {
+	}
+
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
 	font-family: 'Poppins', 'Noto Sans KR', sans-serif;
 	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 	height: 100vh;
@@ -27,45 +27,45 @@
 	align-items: center;
 	color: var(--neutral-dark);
 	transition: all 0.3s ease;
-  }
-  
-  .container {
+}
+
+.container {
 	width: 100%;
 	max-width: 500px;
 	background-color: rgba(255, 255, 255, 0.95);
 	border-radius: 20px;
 	padding: 3rem;
 	box-shadow: 
-	  0 10px 30px var(--shadow),
-	  0 1px 5px var(--shadow);
+		0 10px 30px var(--shadow),
+		0 1px 5px var(--shadow);
 	text-align: center;
 	backdrop-filter: blur(10px);
 	transform: translateY(0);
 	transition: all 0.4s ease;
-  }
-  
-  .container:hover {
+}
+
+.container:hover {
 	transform: translateY(-5px);
 	box-shadow: 
-	  0 15px 35px rgba(0, 0, 0, 0.15),
-	  0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-  
-  h1 {
+		0 15px 35px rgba(0, 0, 0, 0.15),
+		0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
 	font-size: 2.5rem;
 	margin-bottom: 1.5rem;
 	color: var(--primary);
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-  }
-  
-  .counter-container {
+}
+
+.counter-container {
 	position: relative;
 	padding: 1rem;
-  }
-  
-  .counter-value {
+}
+
+.counter-value {
 	font-size: 7rem;
 	font-weight: 800;
 	color: var(--neutral-dark);
@@ -73,9 +73,9 @@
 	margin: 1.5rem 0;
 	transition: all 0.2s ease;
 	position: relative;
-  }
-  
-  .counter-value::after {
+}
+
+.counter-value::after {
 	content: '';
 	position: absolute;
 	bottom: -10px;
@@ -85,16 +85,16 @@
 	background: linear-gradient(to right, var(--primary), var(--accent));
 	transform: translateX(-50%);
 	border-radius: 2px;
-  }
-  
-  .button-container {
+}
+
+.button-container {
 	display: flex;
 	justify-content: center;
 	gap: 1.5rem;
 	margin-top: 2rem;
-  }
-  
-  .button {
+}
+
+.button {
 	padding: 0.75rem 2rem;
 	font-size: 1.25rem;
 	font-weight: 600;
@@ -107,9 +107,9 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-  }
-  
-  .button::before {
+}
+
+.button::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -121,77 +121,77 @@
 	transform-origin: left;
 	transition: transform 0.3s ease;
 	z-index: -1;
-  }
-  
-  .button:hover::before {
+}
+
+.button:hover::before {
 	transform: scaleX(1);
-  }
-  
-  .button:active {
+}
+
+.button:active {
 	transform: translateY(2px);
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  #increment {
+}
+
+#increment {
 	background: linear-gradient(45deg, var(--success), #66bb6a);
-  }
-  
-  #decrement {
+}
+
+#decrement {
 	background: linear-gradient(45deg, var(--danger), #ef5350);
-  }
-  
-  #reset {
+}
+
+#reset {
 	background: linear-gradient(45deg, var(--info), #64b5f6);
-  }
-  
-  /* Animation for counter change */
-  @keyframes pulse {
+}
+
+/* Animation for counter change */
+@keyframes pulse {
 	0% { transform: scale(1); }
 	50% { transform: scale(1.05); }
 	100% { transform: scale(1); }
-  }
-  
-  .counter-animation {
+}
+
+.counter-animation {
 	animation: pulse 0.3s ease-in-out;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 600px) {
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
 	.container {
-	  width: 90%;
-	  padding: 2rem;
+		width: 90%;
+		padding: 2rem;
 	}
-	
+
 	h1 {
-	  font-size: 2rem;
+		font-size: 2rem;
 	}
-	
+
 	.counter-value {
-	  font-size: 5rem;
+		font-size: 5rem;
 	}
-	
+
 	.button {
-	  padding: 0.6rem 1.5rem;
-	  font-size: 1.1rem;
+		padding: 0.6rem 1.5rem;
+		font-size: 1.1rem;
 	}
-  }
-  
-  /* For dark mode preference */
-  @media (prefers-color-scheme: dark) {
+}
+
+/* For dark mode preference */
+@media (prefers-color-scheme: dark) {
 	body {
-	  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+		background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
 	}
-	
+
 	.container {
-	  background-color: rgba(30, 41, 59, 0.95);
-	  color: #fff;
+		background-color: rgba(30, 41, 59, 0.95);
+		color: #fff;
 	}
-	
+
 	h1 {
-	  color: var(--accent);
+		color: var(--accent);
 	}
-	
+
 	.counter-value {
-	  color: #fff;
+		color: #fff;
 	}
-  }
+}

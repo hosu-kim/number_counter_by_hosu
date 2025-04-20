@@ -1,5 +1,12 @@
-import { Counter } from './Counter';
-import { CounterOptions } from './interfaces';
+/*
+file: src/app.ts
+description: Entry point for initializing and configuring the counter application.
+author: hosu-kim
+created: 2025-04-20
+*/
+
+import { Counter } from './Counter.js';
+import { CounterOptions } from './interfaces.js';
 
 // Select DOM elements
 const counterElement = document.getElementById('counter') as HTMLDivElement;
@@ -18,7 +25,7 @@ const counterOptions: CounterOptions = {
 	initialValue: 0,
 	minValue: -1000,
 	maxValue: 1000,
-	step: 1
+	incrementStep: 1
 };
 
 const counter = new Counter(

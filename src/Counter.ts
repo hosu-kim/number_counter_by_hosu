@@ -1,46 +1,81 @@
+/*
+file: src/Counter.ts
+description: Defines the Counter class for managing a numeric counter state
+			 And synchronizing it with the UI.
+author: hosu-kim
+created: 2025-04-20
+*/
+
 import { CounterInterface, CounterOptions } from './interfaces';
 
-// Counter state management class
+/**
+ * @summary Counter state management class
+ * @description
+ * - Including methods
+ * 		1. initEventListeners()		8. updateDisplay()
+ * 		2. destroy()				9. animateCounter()
+ * 		3. addChangeListener()		10. saveCountToStorage()
+ * 		4. notifyListeners()		11. handleIncrement()
+ * 		5. increment()				12. handleDecrement()
+ * 		6. decrement()				13. handleReset()
+ * 		7. reset()					14. handleKeyDown()
+ * */
 export class Counter implements CounterInterface {
+	/* Class attribute declarations */
 	private current_count: number;
 	private minValue: number;
 	private maxValue: number;
-	private step: number;
+	private incrementStep: number;
+	// 'readonly' is used for class attributes in a similar way to 'const' for variables.
 	private readonly STORAGE_KEY = 'counter_value';
+	// Stores an array of functions that take 'count' as a param and return void.
 	private listeners: ((count: number) => void)[] = [];
 
 	/**
-	 * Constructor initializes the counter with a DOM element and options
+	 * Initializes the counter with a DOM element and options
 	 * @param element - The DOM element(HTML element) that displays the counter value
-	 * @param options - Optional configuration for the counter behavior
+	 * @param paramOptions - Optional configuration for the counter behavior
 	 */
+	// 'constructor' is used to receive paramaters and initialize a class instance.
 	constructor(
 		private element: HTMLDivElement,
 		private incrementButton: HTMLButtonElement,
 		private decrementButton: HTMLButtonElement,
 		private resetButton: HTMLButtonElement,
-		options: CounterOptions = {}
-	) {
-		this.minValue = options.minValue ?? Number.MIN_SAFE_INTEGER;
-		this.maxValue = options.maxValue ?? Number.MAX_SAFE_INTEGER;
-		this.step = options.step ?? 1;
+		paramOptions: CounterOptions = {}
+	)
 
-		// Load saved count or use initial value from options
+	/* Class attributes setup:
+		1. minValue 2. maxValue 3. incrementStep 4. savedCount
+	*/
+	{
+		// '??' operator returns the right-hand value
+		// only if the left-hand value is 'null' or 'undefined'.
+		this.minValue = paramOptions.minValue ?? Number.MIN_SAFE_INTEGER;
+		this.maxValue = paramOptions.maxValue ?? Number.MAX_SAFE_INTEGER;
+		this.incrementStep = paramOptions.incrementStep ?? 1;
+
+		// Load saved count in the web browser or use initial value from paramOptions
 		const savedCount = localStorage.getItem(this.STORAGE_KEY);
 		if (savedCount !== null) {
+			// Converts the saved string value to an integer 
+			// based on the provided radix (second param)
 			this.current_count = parseInt(savedCount, 10);
-		} else {
-			this.current_count = options.initialValue ?? 0;
+		}
+		else {
+			this.current_count = paramOptions.initialValue ?? 0;
 		}
 
+		// When the instance is created, these functions update the UI
+		// and initialize event listeners
 		this.updateDisplay();
-		this.init();
+		this.initEventListeners();
 	}
 
 	/**
 	 * Initialize event listeners
 	 */
-	public init(): void {
+	public initEventListeners(): void {
 		this.incrementButton.addEventListener('click', this.handleIncrement);
 		this.decrementButton.addEventListener('click', this.handleDecrement);
 		this.resetButton.addEventListener('click', this.handleReset);
@@ -78,7 +113,7 @@ export class Counter implements CounterInterface {
 	 * Increments the counter by the step value
 	 */
 	public increment(): void {
-		const newCount = this.current_count + this.step;
+		const newCount = this.current_count + this.incrementStep;
 		if (newCount <= this.maxValue) {
 			this.current_count = newCount;
 			this.updateDisplay();
@@ -92,7 +127,7 @@ export class Counter implements CounterInterface {
 	 * Decrements the counter by the step value
 	 */
 	public decrement(): void {
-		const newCount = this.current_count - this.step;
+		const newCount = this.current_count - this.incrementStep;
 		if (newCount >= this.minValue) {
 			this.current_count = newCount;
 			this.updateDisplay();
