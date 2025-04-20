@@ -9,28 +9,28 @@ const resetButton = document.getElementById('reset') as HTMLButtonElement;
 
 // Error handling for DOM elements
 if (!counterElement || !incrementButton || !decrementButton || !resetButton) {
-  console.error('Required DOM elements not found');
-  throw new Error('Required DOM elements not found');
+	console.error('Required DOM elements not found');
+	throw new Error('Required DOM elements not found');
 }
 
 // Create an object with counter configuration
 const counterOptions: CounterOptions = {
-  initialValue: 0,
-  minValue: -1000,
-  maxValue: 1000,
-  step: 1
+	initialValue: 0,
+	minValue: -1000,
+	maxValue: 1000,
+	step: 1
 };
 
 const counter = new Counter(
-  counterElement,
-  incrementButton,
-  decrementButton,
-  resetButton,
-  counterOptions
+	counterElement,
+	incrementButton,
+	decrementButton,
+	resetButton,
+	counterOptions
 );
 
 // Example of using the change listener
 counter.addChangeListener((newCount) => {
-  console.log(`Counter value changed to: ${newCount}`);
-  // You could use this for analytics, saving to server, etc.
+	console.log(`Counter value changed to: ${newCount}`);
+	// You could use this for analytics, saving to server, etc.
 });
